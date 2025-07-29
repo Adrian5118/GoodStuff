@@ -1,13 +1,16 @@
 package com.goodstuff.goodstuff.lib
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.goodstuff.goodstuff.R
 import java.text.DecimalFormat
 
@@ -34,12 +37,24 @@ class ProductAdapter (
         val decimalFormat = DecimalFormat.getInstance();
         val product = productList[position]
         holder.name.text = product.name
-        holder.rating.text = "Rating: ${product.getRating()}"
+        holder.rating.text = "${R.string.product_rating}: ${product.getRating()}"
         holder.price.text = "Rp. ${decimalFormat.format(product.price - (product.price * product.discount))}.00"
-        Glide.with(holder.itemView.context).load(product.image).into(holder.image)
+
+        val options: RequestOptions = RequestOptions()
+            .centerCrop()
+            .placeholder(R.mipmap.ic_goodstuff_round)
+            .error(R.mipmap.ic_goodstuff_round)
+        Glide.with(holder.itemView.context)
+            .load(product.image)
+            .apply(options)
+            .into(holder.image)
 
         if(product.stock <= 0) {
-            holder.price.text = "OUT OF STOCK"
+            holder.price.text = "${R.string.product_out_of_stock}"
+        }
+
+        if(product.discount > 0.0) {
+            holder.price.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.discount_red))
         }
 
         holder.itemView.setOnClickListener() {

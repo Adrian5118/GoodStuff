@@ -51,7 +51,7 @@ class StorefrontViewModel : ViewModel() {
                 "Test",
                 75000.00,
                 0.0,
-                5
+                0
             ),
             Product(
                 "3",
@@ -60,7 +60,7 @@ class StorefrontViewModel : ViewModel() {
                 "",
                 "Test",
                 75000.00,
-                0.0,
+                0.3,
                 5
             ),
             Product(

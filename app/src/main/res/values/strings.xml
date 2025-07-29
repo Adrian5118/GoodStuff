@@ -6,4 +6,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_storefront">Storefront</string>
     <string name="title_user">User</string>
+    <string name="product_out_of_stock">OUT OF STOCK</string>
+    <string name="product_rating">Rating</string>
 </resources>
