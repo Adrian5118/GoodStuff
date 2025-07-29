@@ -16,7 +16,20 @@ class StorefrontViewModel : ViewModel() {
     }
     val text: LiveData<String> = _text
 
-    val firestore = Firebase.firestore
+    private val firestore = Firebase.firestore
+
+    private val _fsProducts = firestore.collection("Produk")
+        .get()
+        .addOnSuccessListener { result ->
+            for(document in result) {
+                Log.d("Firestore Test", "${document.id} => ${document.data}")
+            }
+        }
+        .addOnFailureListener { exception ->
+            Log.d("Firestore Test", "Exception when getting documents: ", exception)
+        }
+
+    val fsProducts = _fsProducts
 
     private val _products = MutableLiveData<ArrayList<Product>>().apply {
         value = arrayListOf(
@@ -28,7 +41,7 @@ class StorefrontViewModel : ViewModel() {
                 "Test",
                 75000.00,
                 0.0,
-                arrayListOf()
+                5
             ),
             Product(
                 "2",
@@ -38,7 +51,7 @@ class StorefrontViewModel : ViewModel() {
                 "Test",
                 75000.00,
                 0.0,
-                arrayListOf()
+                5
             ),
             Product(
                 "3",
@@ -48,7 +61,7 @@ class StorefrontViewModel : ViewModel() {
                 "Test",
                 75000.00,
                 0.0,
-                arrayListOf()
+                5
             ),
             Product(
                 "4",
@@ -58,24 +71,10 @@ class StorefrontViewModel : ViewModel() {
                 "Test",
                 75000.00,
                 0.0,
-                arrayListOf()
+                5
             )
         )
     }
 
     val products: LiveData<ArrayList<Product>> = _products
-
-    private val _product = MutableLiveData<Product>().apply {
-        value = Product(
-            "1",
-            "Test",
-            "placeholder.jpg",
-            "",
-            "Test",
-            75000.00,
-            0.0,
-            arrayListOf()
-        )
-    }
-    val product: LiveData<Product> = _product
 }

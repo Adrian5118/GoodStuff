@@ -10,6 +10,7 @@ data class Product (
     var category: String = "",
     var price: Double = 0.0,
     var discount: Double = 0.0,
+    var stock: Int = 0,
     var reviews: ArrayList<Review> = arrayListOf()
 ) : Serializable {
     fun getRating(): Double {

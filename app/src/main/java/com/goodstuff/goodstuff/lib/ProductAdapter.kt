@@ -38,6 +38,10 @@ class ProductAdapter (
         holder.price.text = "Rp. ${decimalFormat.format(product.price - (product.price * product.discount))}.00"
         Glide.with(holder.itemView.context).load(product.image).into(holder.image)
 
+        if(product.stock <= 0) {
+            holder.price.text = "OUT OF STOCK"
+        }
+
         holder.itemView.setOnClickListener() {
             onItemClick(product)
         }
