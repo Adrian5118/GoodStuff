@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "258993923974",
+    "project_id": "data-konveksi-kelompok-1",
+    "storage_bucket": "data-konveksi-kelompok-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258993923974:android:42b006ff97e73645946e07",
+        "android_client_info": {
+          "package_name": "com.goodstuff.goodstuff"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtl7GA643R15kbZAIC-guJ17cL6TM4EWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
