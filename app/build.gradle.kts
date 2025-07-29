@@ -18,12 +18,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    copy {
-        from("../../Temp/")
-        into(".")
-        include("*.json")
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = false
