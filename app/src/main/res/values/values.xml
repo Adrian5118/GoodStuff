@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">258993923974-7niie022le0scb38b6f0t1c7lrd145o0.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">258993923974</string>
+    <string name="google_api_key" translatable="false">AIzaSyCtl7GA643R15kbZAIC-guJ17cL6TM4EWM</string>
+    <string name="google_app_id" translatable="false">1:258993923974:android:42b006ff97e73645946e07</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCtl7GA643R15kbZAIC-guJ17cL6TM4EWM</string>
+    <string name="google_storage_bucket" translatable="false">data-konveksi-kelompok-1.firebasestorage.app</string>
+    <string name="project_id" translatable="false">data-konveksi-kelompok-1</string>
+</resources>

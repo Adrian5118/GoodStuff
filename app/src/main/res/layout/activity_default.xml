@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FAFAFA"
+    tools:context=".DefaultActivity">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/goodstufflogo"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="App Logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang!"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:text="Login"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"/>
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Register"
+        android:textColor="#6200EE"
+        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/rounded_button_border"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
